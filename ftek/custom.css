@@ -1,0 +1,109 @@
+:root {
+  --custom-primary: #5f7adb;
+  --custom-secondary: #a2b2ee;
+  --custom-accent: #7b8cdd;
+  --custom-text: #26292b;
+  --custom-light-bg: #ffffff;
+  --custom-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --custom-transition: all 0.3s ease-out;
+}
+
+/* Анимация fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Стили для кнопок */
+.browser-tab {
+  background: var(--custom-light-bg);
+  color: var(--custom-text);
+  transition: var(--custom-transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.browser-tab:hover {
+  background: var(--custom-secondary);
+  color: var(--custom-text);
+  transform: translateY(-1px);
+}
+
+.browser-tab.active {
+  background: var(--custom-primary);
+  color: white;
+  box-shadow: var(--custom-shadow);
+}
+
+/* Остальные стили */
+.step-title {
+  color: var(--custom-primary);
+  border-bottom: 2px solid var(--custom-primary);
+}
+
+.icon-list li i {
+  color: var(--custom-primary);
+  width: 25px;
+}
+
+.custom-alert-info {
+  background-color: var(--custom-secondary);
+  border-color: var(--custom-secondary);
+  color: var(--custom-text);
+}
+
+/* Стили нельзя заменить */
+.faq-item {
+  height: auto; /* Убрана фиксированная высота */
+}
+
+.step-description {
+  height: auto; 
+}
+
+.size-card {
+  min-height: 240px;
+}
+
+.custom-card-title {
+  color: var(--custom-primary);
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  transition: var(--custom-transition);
+}
+
+.faq-item h3 {
+  color: var(--custom-primary);
+}
+
+.faq-item p,
+.step-description .custom-card p {
+  color: var(--custom-text);
+  font-size: 0.9rem;
+}
+
+.custom-alert-info {
+  background-color: var(--custom-secondary);
+  border-color: var(--custom-secondary);
+  color: var(--custom-text);
+}
+
+.fs-custom {
+  font-size: 0.875rem; /* Меньше, чем fs-6 (1rem) */
+}
+
+.mb-custom {
+  margin-bottom: 2rem; /* Кастомное значение между mb-4 и mb-5 */
+}
